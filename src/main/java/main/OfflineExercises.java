@@ -116,15 +116,16 @@ public class OfflineExercises {
 	// amISearch("I am in Amsterdam am I?") → 2
 	// amISearch("I have been in Amsterdam") → 0
 
+	
 	public int amISearch(String arg1) {
 		int count = 0;
-		for (int i = 0; i < values.length() - 1;) {
-			if (values.substring(i) == 'a' && values.substring(i + 1) == 'm') {
+		for (int i = 0; i < arg1.length() - 1;) {
+			if (arg1.substring(i) == "a" && arg1.substring(i + 1) == "m") {
 				return 1;
 			}
 		}
 		return 0;
-		return values.contains("am");
+//		return arg1.contains("am");
 
 	}
 
@@ -138,8 +139,7 @@ public class OfflineExercises {
 	// fizzBuzz(15) ==> "fizzbuzz"
 
 	public String fizzBuzz(int arg1) {
-//		int a ;
-//		int b;
+
 
 		if (isDivisible(arg1, 3) && (isDivisible(arg1, 5))) {
 			return "fizzbuzz";
